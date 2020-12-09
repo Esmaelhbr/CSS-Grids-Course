@@ -1,0 +1,130 @@
+body {
+  padding: 20px;
+}
+
+/*======== Grid areas ============== */
+
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 50px);
+    grid-template-areas: 'a a a b' 
+                         'c c c b'
+                         '. footer footer .';
+    grid-gap: 10px;
+}
+
+.item {
+    background-color: deepskyblue;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.item-1 {
+    background-color: orange;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: span 2;
+    grid-row: 2 / span 3;
+    grid-area: a;
+}
+
+.item-4 {
+    background-color: red;
+    grid-area: b;
+}
+
+.item-2 {
+    background-color: green;
+    grid-area: c;
+}
+
+.item-6 {
+    background-color: purple;
+    grid-area: footer;
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-areas: 'a a a a'
+                            ' b b b b'
+                            '. c c c'
+                            'footer footer footer footer';
+    }
+} */
+
+/*======== Naming grid lines ============== */
+
+/* .container {
+  display: grid;
+  grid-template-columns: [col-1-start]1fr [col-1-end col-2-start] 1fr [col-2-end col-3-start] 1fr [col-3-end];
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
+  grid-template-rows: [firstRow]50px [secondRow] 50px [thridRow] 50px [lastRow];
+  grid-gap: 10px;
+} */
+
+/* .container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 50px 100px 50px;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas:
+    "hd hd"
+    "sidebar main"
+    "footer footer";
+}
+
+.item {
+  background-color: deepskyblue;
+  font-size: 20px;
+}
+
+.item-1 {
+  background-color: red;
+  grid-area: footer;
+}
+
+.item-4 {
+  background-color: orange;
+  grid-area: hd;
+}
+
+.item-2 {
+  background-color: seagreen;
+  grid-column: main-start / main-end;
+}
+
+.item-3 {
+  grid-row: sidebar-start / sidebar-end;
+} */
+
+/*======== Layering grid items ============== */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+}
+
+.item {
+  background-color: deepskyblue;
+  font-size: 20px;
+}
+
+.item-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+}
+
+.item-3 {
+  background-color: rgba(255, 166, 0, 0.979);
+  /* z-index: 1; */
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}

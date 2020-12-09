@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Exercise</title>
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 100px);
+      grid-template-areas: 'brand header header header'
+                            'sidebar main main ad'
+                            'sidebar main main ad'
+                            'footer footer footer ad';
+      grid-gap: 10px;
+    }
+
+    .item {
+      background-color: blueviolet;
+    }
+
+    .item-1 {
+      grid-area: brand;
+    }    
+
+    .item-2 {
+      grid-area: header;
+    }
+
+    .item-3 {
+      grid-area: sidebar;
+    }
+
+    .item-4 {
+      grid-area: main;
+    }
+
+    .item-5 {
+      grid-area: ad;
+    }
+
+    .item-6 {
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item-1"></div>
+    <div class="item item-2"></div>
+    <div class="item item-3"></div>
+    <div class="item item-4"></div>
+    <div class="item item-5"></div>
+    <div class="item item-6"></div>
+  </div>
+</body>
+</html>

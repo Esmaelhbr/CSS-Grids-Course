@@ -1,0 +1,43 @@
+body {
+  padding: 20px;
+}
+
+/* =============== Alignin Grid Items ============= */
+/* .container  {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 10px;
+  background-color: #cccccc;
+  justify-items: stretch;
+  align-items: stretch; 
+  place-items: center end;
+} */
+
+/* .item {
+  background-color: blueviolet;
+  font-size: 20px;
+}
+
+.item-2 {
+  justify-self: center;
+  align-self: center;
+} */
+
+/* ============== Aligning Grid track ============== */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(3, 100px);
+  width: 800px;
+  height: 500px;
+  grid-gap: 10px;
+  background-color: #cccccc;
+  /* justify-content: space-around; */
+  align-content: space-around;
+}
+
+.item {
+  background-color: blueviolet;
+  font-size: 20px;
+}
